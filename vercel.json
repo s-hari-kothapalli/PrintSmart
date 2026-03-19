@@ -1,10 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" }
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/printsmart", "destination": "/index.html" },
+    { "source": "/printsmart.html", "destination": "/index.html" }
   ],
-  "redirects": [
-    { "source": "/", "destination": "/index.html", "permanent": false }
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
   ]
 }
 

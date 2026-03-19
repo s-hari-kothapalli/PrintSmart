@@ -1,1 +1,11 @@
-{ "homepage": "https://useprintsmart.co/" }
+{
+  "name": "printsmart-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static landing page for PrintSmart",
+  "scripts": {
+    "build": "echo \"Static site: no build step required\"",
+    "dev": "python3 -m http.server 8000"
+  },
+  "homepage": "https://useprintsmart.co/"
+}
